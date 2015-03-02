@@ -21,15 +21,15 @@ PRODUCT_RELEASE_NAME := p3100
 TARGET_SCREEN_HEIGHT := 1024
 TARGET_SCREEN_WIDTH := 600
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common SOKP stuff.
+$(call inherit-product, vendor/sokp/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/p3100/full_p3100.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := p3100
-PRODUCT_NAME := cm_p3100
+PRODUCT_NAME := sokp_p3100
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-P3100
 PRODUCT_MANUFACTURER := samsung
