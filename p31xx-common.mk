@@ -17,7 +17,7 @@
 # Include omap4 common makefile
 $(call inherit-product, device/samsung/omap4-common/common.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/p3100/common-overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/p3100/overlay/aosp-common
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -27,7 +27,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 LOCAL_PATH := device/samsung/p3100
 
 # Enable higher-res drawables while keeping mdpi as primary source
-PRODUCT_AAPT_CONFIG := large mdpi hdpi xhdpi
+PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_LOCALES += mdpi
 
@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
     lights.piranha \
     libinvensense_mpl \
     power.piranha
+
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.isUsbOtgEnabled=true
 
 # Charger
 PRODUCT_PACKAGES += \

@@ -81,6 +81,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/p3100/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/p3100/bluetooth/vnd_espresso.txt
 
+# Charger
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
 
@@ -114,9 +117,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/p3100/rootdir/fstab.espresso
 RECOVERY_FSTAB_VERSION := 2
-
-# build swipe recovery by default
-BOARD_RECOVERY_SWIPE := true
+BOARD_HAS_DOWNLOAD_MODE := true
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/p31xx/BoardConfigVendor.mk
