@@ -47,7 +47,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">64</integer>
+    
 
     <!-- Is the device LTE capable -->
     <bool name="config_lte_capable">false</bool>
